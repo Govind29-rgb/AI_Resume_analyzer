@@ -21,7 +21,7 @@ const ResumeCard = ({ resume: { id, companyName, jobTitle, feedback,imagePath } 
         <div className="flex-shrink-0">
           <ScoreCircle score={feedback.overallScore} />
         </div>
-      </div>
+      </div>        
 
       {/* resume image following */}
       <div className="gradient-border animate-in fade-in duration-1000">
