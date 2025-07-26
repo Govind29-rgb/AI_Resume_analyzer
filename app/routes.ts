@@ -6,4 +6,5 @@ export default
 [index("routes/home.tsx"),
     // helps us to go to routes/auth page
 route('/auth','routes/auth.tsx'),
+route('/upload','routes/upload.tsx'),
 ] satisfies RouteConfig;

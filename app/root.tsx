@@ -1,3 +1,5 @@
+//init function connects front end backend
+
 import {
   isRouteErrorResponse,
   Links,
@@ -7,7 +9,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import { useEffect } from "react";
-import { usePuterStore } from "~/lib/puter";        
+import { usePuterStore } from "~/lib/puter";
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -31,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Initialize Puter store
     init();
-  }, [init]);     
+  }, [init]);
 
   return (
     <html lang="en">
