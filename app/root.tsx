@@ -1,5 +1,3 @@
-//init function connects front end backend
-
 import {
   isRouteErrorResponse,
   Links,
@@ -8,12 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-import { useEffect } from "react";
-import { usePuterStore } from "~/lib/puter";
+
 import type { Route } from "./+types/root";
 import "./app.css";
+import {usePuterStore} from "~/lib/puter";
+import {useEffect} from "react";
 
-// Add Google Fonts and preconnect links
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -31,8 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const { init } = usePuterStore();
 
   useEffect(() => {
-    // Initialize Puter store
-    init();
+    init()
   }, [init]);
 
   return (
@@ -44,7 +41,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {/* added puter for backend */}
         <script src="https://js.puter.com/v2/"></script>
         {children}
         <ScrollRestoration />
